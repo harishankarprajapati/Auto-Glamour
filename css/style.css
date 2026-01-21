@@ -1329,6 +1329,8 @@ body {
   background: #000;
   color: #bcbcbc;
   padding-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
