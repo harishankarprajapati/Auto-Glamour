@@ -15,7 +15,32 @@
 }
 
 @media only screen and (max-width:768px) {
+  .sec-mobilelogo{
+  display: block;
+  width: 75%;
+}
+  .sec-mobilelogo img{
+  width: 90%;
+  height: 53px;
+}
+.secpadlrlf {
+    padding: 0px 15px;
+}
 
+
+  .sec-desktoplogo{
+    display: none;
+  }
+.header{
+  display: none;
+}
+.top-strip{
+  display: none;
+}
+.nav-logo {
+    height: 70px;
+    margin-top: 0px;
+}
   .label {
     position: static !important;
     margin: 6px;
