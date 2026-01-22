@@ -13,7 +13,7 @@ html, body {
 
 /* default */
 #header-file {
-  position: fixed;            /* FIXED = 100% reliable */
+  position: fixed;          
   top: 0;
   left: 0;
   width: 100%;
@@ -21,9 +21,8 @@ html, body {
   background: #fff;
 }
 
-/* space so content does not hide under header */
 body {
-  padding-top: 110px; /* adjust = header height */
+  padding-top: 110px;
 }
 
 

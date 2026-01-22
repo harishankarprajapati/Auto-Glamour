@@ -190,7 +190,7 @@ function initSearchTyping() {
 initSearchTyping();
 
 
-//scroll progress bar
+//scroll progress bar daktop
 
 function progressBarScroll() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
@@ -202,3 +202,21 @@ function progressBarScroll() {
 window.onscroll = function () {
   progressBarScroll();
 };
+
+
+
+// scroll progress bar mobile
+
+
+window.addEventListener("scroll", function () {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const percent = (scrollTop / scrollHeight) * 100;
+
+  const mobileBar = document.getElementById("progressBarMobile");
+  if (mobileBar) mobileBar.style.width = percent + "%";
+});
+
+
+
