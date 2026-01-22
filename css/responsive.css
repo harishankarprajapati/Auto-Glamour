@@ -119,6 +119,7 @@
   .topon2 {
     left: 53px;
   }
+  
 }
 
 /* -------992px--------- */
@@ -243,6 +244,8 @@
 .newsletter-form {
     max-width: 100%;
 }
+
+
 }
 
 /* body space so content not hidden */
