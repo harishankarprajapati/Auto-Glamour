@@ -38,22 +38,26 @@
   .header {
     display: none;
   }
-.secarrivalbg {
+
+  .secarrivalbg {
     padding: 40px 10px;
-}
-.secmobino{
-  display: none;
-}
-.product-img img {
+  }
+
+  .secmobino {
+    display: none;
+  }
+
+  .product-img img {
     width: 100%;
     height: 160px;
-}
-.product-bottom {
+  }
+
+  .product-bottom {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-}
+  }
 
   .nav-logo {
     height: 70px;
@@ -64,7 +68,7 @@
     position: static !important;
     margin: 6px;
     display: inline-block;
-        padding: 3px 15px;
+    padding: 3px 15px;
   }
 
   .car-container {
@@ -90,19 +94,31 @@
   }
 
   .secbbthero a {
-          padding: 5px 20px 5px 5px;
+    padding: 5px 20px 5px 5px;
   }
 
   .secbbthero .secntheb2 {
-              padding: 5px 20px 5px 5px;
+    padding: 5px 20px 5px 5px;
   }
-.car-solution {
+
+  .car-solution {
     padding: 50px 0px;
 
+  }
+  .seccarhero .owl-nav {  
+      top: -215px;   
 }
-.topon2 {
+.seccarhero button.owl-next , .seccarhero button.owl-prev {
+    font-size: 15px !important;
+    padding: 4px 13px !important;
+}
+  .btn-buy {
+    font-size: 14px;
+  }
+
+  .topon2 {
     left: 53px;
-}
+  }
 }
 
 /* -------992px--------- */
