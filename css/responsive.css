@@ -99,7 +99,9 @@
     border: 2px solid #8B6A1F;
   }
 
-
+body {
+  padding-top: 80px; 
+}
   .navbar-toggler {
     border-color: #8B6A1F;
   }
