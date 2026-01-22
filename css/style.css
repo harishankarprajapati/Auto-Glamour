@@ -1532,10 +1532,11 @@ text-decoration: none;
 color: #b68a2c;
 text-decoration: underline;
 }
-/* PRODUCTS TOP BAR */
+
+/* ================= PRODUCTS TOP BAR ================= */
 .products-topbar{
   background:#f7f4ec;
-  padding:50px 0px 0px 0px;
+  padding:50px 0 0;
 }
 
 .products-topbar-inner{
@@ -1556,13 +1557,14 @@ text-decoration: underline;
   gap:8px;
 }
 
-/* RIGHT CONTROLS */
+/* Right controls */
 .right-controls{
   display:flex;
   align-items:center;
   gap:22px;
 }
 
+/* View toggle */
 .view-toggle{
   display:flex;
   gap:8px;
@@ -1580,9 +1582,8 @@ text-decoration: underline;
   cursor:pointer;
 }
 
-/* ACTIVE ICON (ONLY ONCE) */
 .view-toggle span.active{
-  background: linear-gradient(0deg, rgba(139,106,31,1) 47%, rgba(230,201,106,1) 100%);
+  background:linear-gradient(0deg, rgba(139,106,31,1) 47%, rgba(230,201,106,1) 100%);
   color:#fff;
   border-color:#8B6A1F;
 }
@@ -1593,7 +1594,6 @@ text-decoration: underline;
   font-size:14px;
 }
 
-/* SORT */
 .sort-wrap{
   display:flex;
   align-items:center;
@@ -1613,18 +1613,17 @@ text-decoration: underline;
   background:#fff;
 }
 
-/* PRODUCTS SECTION */
+/* ================= PRODUCTS SECTION ================= */
 .secproductsbg{
   background:#f7f4ec;
-  padding:10px 0px 50px 0px;
+  padding:10px 0 50px;
 }
 
-/* GRID → LIST TRANSITION */
 .secproductsbg .row{
-  transition: all .3s ease;
+  transition:.3s ease;
 }
 
-/* LIST VIEW */
+/* ================= LIST VIEW ================= */
 .secproductsbg.list-view .col-md-3{
   width:100%;
   max-width:100%;
@@ -1634,7 +1633,7 @@ text-decoration: underline;
   display:flex;
   align-items:center;
   gap:25px;
-  padding:20px;
+  text-align:left;
 }
 
 .secproductsbg.list-view .hbs-product img{
@@ -1642,16 +1641,13 @@ text-decoration: underline;
   margin:0;
 }
 
-.secproductsbg.list-view .hbs-product h6,
-.secproductsbg.list-view .hbs-product p{
-  text-align:left;
-}
-
 .secproductsbg.list-view .hbs-btns{
   margin-left:auto;
   display:flex;
   gap:10px;
 }
+
+
 
 /* ================= FILTER SIDEBAR ================= */
 .filter-sidebar{

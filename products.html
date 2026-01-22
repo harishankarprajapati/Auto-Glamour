@@ -197,10 +197,10 @@
   </div>
 
   <!-- products add -->
-  <div class="container-fluid secproductsbg ">
+  <div class="container-fluid secproductsbg " id="productWrapper">
     <div class="container">
       <div class="row">
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -212,7 +212,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -224,7 +224,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -236,7 +236,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -248,7 +248,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -260,7 +260,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -272,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -284,7 +284,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3" id="home-best-seller">
+        <div class="col-md-3 col-6" id="home-best-seller">
           <div class="hbs-product">
             <img src="images/product-img1.png" alt="">
             <h6>Power Programmer Chips</h6>
@@ -351,26 +351,35 @@ document.querySelectorAll('.toggle-filter').forEach(title=>{
 });
 
 
-    // GRID
-    document.querySelectorAll('.view-toggle span').forEach(btn => {
-      btn.addEventListener('click', function () {
+   document.addEventListener('DOMContentLoaded', function () {
 
-        // active icon
-        document.querySelectorAll('.view-toggle span')
-          .forEach(i => i.classList.remove('active'));
-        this.classList.add('active');
+  const viewBtns = document.querySelectorAll('.view-toggle span');
+  const productSection = document.querySelector('.secproductsbg');
 
-        const view = this.getAttribute('data-view');
-        const productSection = document.querySelector('.secproductsbg');
+  if (!productSection || viewBtns.length === 0) return;
 
-        if (view === 'list') {
-          productSection.classList.add('list-view');
-        } else {
-          productSection.classList.remove('list-view');
-        }
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
 
-      });
+      /* remove active from all */
+      viewBtns.forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+
+      const view = this.getAttribute('data-view');
+
+      /* reset first */
+      productSection.classList.remove('list-view');
+
+      /* apply view */
+      if (view === 'list') {
+        productSection.classList.add('list-view');
+      }
+
     });
+  });
+
+});
+
 
 
     // loder-start

@@ -141,6 +141,42 @@
 .sectextheral {
     font-size: 50px;
 }
+#home-best-seller .hbs-product img {
+    width: 100%;
+
+}
+#home-best-seller .hbs-product {
+    padding: 13px;
+}
+#home-best-seller h6 {
+    font-size: 16px;
+}
+
+
+  /* mobile grid = image left, text right */
+
+
+
+  .hbs-product img{
+    max-width:90px;
+    margin:0;
+  }
+
+  .hbs-product h6,
+  .hbs-product p{
+    text-align:left;
+  }
+
+  /* list view mobile same */
+  .secproductsbg.list-view .hbs-product{
+    gap:16px;
+  }
+  #home-best-seller .hbs-product:hover .hbs-btns {
+    max-height: 111px;
+    flex-direction: column;
+  }
+
+
 }
 
 /* -------992px--------- */
