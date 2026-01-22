@@ -1653,16 +1653,6 @@ text-decoration: underline;
   gap:10px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .right-controls{
-    gap:14px;
-  }
-  .view-toggle,
-  .product-count{
-  
-  }
-}
 /* ================= FILTER SIDEBAR ================= */
 .filter-sidebar{
   position:fixed;
