@@ -1503,3 +1503,32 @@ div#hbs-content {
 .hbs-tabs-carousel{
   align-items: center;  
 }
+
+/* about page */
+.abutsecbg{
+  background-image: url(../images/aboutbgimg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 60px ;
+}
+.sectextheral{
+  font-family: 'Jost';
+  font-size: 80px;
+  font-weight: 600;
+  color: #ffff;
+  text-align: center;
+}
+.secprdec{
+  text-align: center;
+  color: #fff;
+}
+.secmebg{
+font-family: 'Archivo';
+font-size: 18px;
+color: #fff;
+text-decoration: none;
+}
+.secmebg2{
+color: #b68a2c;
+text-decoration: underline;
+}
