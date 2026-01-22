@@ -15,32 +15,39 @@
 }
 
 @media only screen and (max-width:768px) {
-  .sec-mobilelogo{
-  display: block;
-  width: 75%;
-}
-  .sec-mobilelogo img{
-  width: 90%;
-  height: 53px;
-}
-.secpadlrlf {
+  .sec-mobilelogo {
+    display: block;
+    width: 75%;
+  }
+
+  .sec-mobilelogo img {
+    width: 90%;
+    height: 53px;
+  }
+
+  .secpadlrlf {
     padding: 0px 15px;
-}
+    background: #000;
+  }
 
 
-  .sec-desktoplogo{
+  .sec-desktoplogo {
     display: none;
   }
-.header{
-  display: none;
-}
-.top-strip{
-  display: none;
-}
-.nav-logo {
+
+  .header {
+    display: none;
+  }
+
+  .top-strip {
+    display: none;
+  }
+
+  .nav-logo {
     height: 70px;
     margin-top: 0px;
-}
+  }
+
   .label {
     position: static !important;
     margin: 6px;
@@ -57,11 +64,12 @@
     justify-content: center;
     margin-top: 20px;
   }
+
   .label a {
     color: #fff;
     text-decoration: none;
     font-size: 11px;
-}
+  }
 
   .car-container {
     margin: 0px;
@@ -71,23 +79,39 @@
   .secbbthero a {
     padding: 16px 10px 16px 10px;
   }
-    .secbbthero .secntheb2 {
+
+  .secbbthero .secntheb2 {
     padding: 16px 10px 16px 10px;
   }
 
 
 
 }
+
 /* -------992px--------- */
 @media only screen and (max-width:992px) {
- 
+  .secpadlrlf {
+    padding: 0px 15px;
+    background: #000;
+  }
+
+  button.navbar-toggler {
+    border: 2px solid #8B6A1F;
+  }
+
+
+  .navbar-toggler {
+    border-color: #8B6A1F;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(139,106,31,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
 }
 
 /* -------576px--------- */
-@media only screen and (max-width: 576px) {
-  
-}
+@media only screen and (max-width: 576px) {}
 
 /* -------480px--------- */
 @media only screen and (max-width:480px) {}
-
