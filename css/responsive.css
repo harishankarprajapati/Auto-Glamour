@@ -134,6 +134,13 @@
   .filter-sidebar , .filter-overlay{ 
     top: 78px;
   }
+  .abutsecbg {
+    padding: 50px 10px;
+    margin-top: -3px;
+}
+.sectextheral {
+    font-size: 50px;
+}
 }
 
 /* -------992px--------- */
