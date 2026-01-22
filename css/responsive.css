@@ -12,7 +12,19 @@
   .new-pet {
     margin-right: 15%;
   }
+      .d-xl-none {
+        display: none !important;
+    }
 }
+/* -------1400px--------- */
+@media only screen and (min-width:1024px) {
+
+
+      .d-xl-none {
+        display: none !important;
+    }
+}
+
 
 @media only screen and (max-width:768px) {
   .sec-mobilelogo {
