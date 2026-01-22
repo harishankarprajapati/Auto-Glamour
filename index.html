@@ -58,7 +58,7 @@
       <img src="images/dogloader.gif" alt="Loading..." class="loader-gif">
     </div>
   </div>
-  
+
   <!-- header -->
   <div include-html="header.html" id="header-file"></div>
 
@@ -531,23 +531,31 @@
       <h2 class="text-center mb-4">Best sellers</h2>
 
 
-      <ul id="hbs-tabs" class="nav justify-content-center mb-4">
-        <li class="nav-item">
-          <button type="button" class="nav-link active" data-hbs-tab="hbs1">
-            <img src="images/sellersimg1.png" alt=""><br>Top new
-          </button>
-        </li>
-        <li class="nav-item">
-          <button type="button" class="nav-link" data-hbs-tab="hbs2">
-            <img src="images/sellersimg2.png" alt=""><br>Featured
-          </button>
-        </li>
-        <li class="nav-item">
-          <button type="button" class="nav-link" data-hbs-tab="hbs3">
-            <img src="images/sellersimg3.png" alt=""><br>New arrivals
-          </button>
-        </li>
-      </ul>
+    <div class="owl-carousel hbs-tabs-carousel">
+
+    <div class="item">
+      <button type="button" class="nav-link active" data-hbs-tab="hbs1">
+        <img src="images/sellersimg1.png" alt="">
+        <span>Top new</span>
+      </button>
+    </div>
+
+    <div class="item">
+      <button type="button" class="nav-link" data-hbs-tab="hbs2">
+        <img src="images/sellersimg2.png" alt="">
+        <span>Featured</span>
+      </button>
+    </div>
+
+    <div class="item">
+      <button type="button" class="nav-link" data-hbs-tab="hbs3">
+        <img src="images/sellersimg3.png" alt="">
+        <span>New arrivals</span>
+      </button>
+    </div>
+
+  </div>
+
 
 
       <div id="hbs-content">
@@ -840,19 +848,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>  
 
@@ -1025,6 +1020,46 @@
     // loder-end
 
   </script>
+<script>
+$(document).ready(function(){
+
+  /* Owl carousel init */
+  $('.hbs-tabs-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+     autoWidth: true,
+    nav:false,
+    dots:false,
+    responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2.2
+        },
+        1000: {
+          items: 3
+        }
+      }
+  });
+
+  /* ===== TAB SWITCH LOGIC ===== */
+  $('.hbs-tabs-carousel').on('click', '.nav-link', function(){
+
+    let target = $(this).data('hbs-tab');
+
+    // tab active
+    $('.hbs-tabs-carousel .nav-link').removeClass('active');
+    $(this).addClass('active');
+
+    // content switch
+    $('.hbs-pane').removeClass('active').hide();
+    $('#' + target).fadeIn(200).addClass('active');
+
+  });
+
+});
+</script>
 
 
 

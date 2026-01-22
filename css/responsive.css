@@ -215,12 +215,40 @@
     padding-top: 20px;
     padding-left: 10px;
   }
+  .deal-card h5 {
+    font-size: 28px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+}
+.footer-links h6 {
+    padding-top: 40px;
+}
+.footer-logo {
+    padding-bottom: 30px;
+}
+.footer-social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 18px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+.footer-border {
+    border: 0 !important;
+}
+.newsletter-text {
+    padding-left: 10px;
+}
+.newsletter-form {
+    max-width: 100%;
+}
 }
 
 /* body space so content not hidden */
 @media (max-width: 1199px) {
   body {
-    padding-bottom: 70px;
+    padding-bottom: 63px;
   }
 }
 
@@ -229,3 +257,5 @@
 
 /* -------480px--------- */
 @media only screen and (max-width:480px) {}
+
+

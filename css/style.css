@@ -1491,3 +1491,15 @@ body {
   text-decoration: none;
    font-size: 14px;
 }
+.hbs-tabs-carousel .owl-nav {
+    display: none;
+}
+.hbs-tabs-carousel .owl-dots {
+    display: none;
+}
+div#hbs-content {
+    padding-top: 30px;
+}
+.hbs-tabs-carousel{
+  align-items: center;  
+}
