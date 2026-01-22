@@ -226,6 +226,9 @@ body {
   width: 100%;
   height: auto;
 }
+.seccarhero .owl-dots {
+    display: none;
+}
 
 .label {
   position: absolute;

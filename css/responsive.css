@@ -52,6 +52,7 @@
     position: static !important;
     margin: 6px;
     display: inline-block;
+        padding: 3px 15px;
   }
 
   .car-container {
@@ -77,15 +78,19 @@
   }
 
   .secbbthero a {
-            padding: 6px 10px 8px 10px;
+          padding: 5px 20px 5px 5px;
   }
 
   .secbbthero .secntheb2 {
-            padding: 6px 10px 8px 10px;
+              padding: 5px 20px 5px 5px;
   }
+.car-solution {
+    padding: 0px 0px 80px 0px;
 
-
-
+}
+.topon2 {
+    left: 53px;
+}
 }
 
 /* -------992px--------- */
