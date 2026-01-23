@@ -65,109 +65,14 @@
 
   <!-- abouther -->
   <div class="container-fluid abutsecbg">
-    <h2 class="sectextheral">Products</h2>
+    <h2 class="sectextheral">About Us</h2>
     <p class="secprdec"><a class="secmebg" href="index.html">Home</a> | <a class="secmebg2"
-        href="#">Power Programmer Chips</a></p>
+        href="about.html">About Us</a></p>
   </div>
 
-  <!-- PRODUCT DETAIL -->
+    <!-- PRODUCT DETAIL -->
   <div class="container-fluid secproductsbg2">
-    <div class="container">
-      <div class="row align-items-start g-4">
 
-        <!-- LEFT : IMAGE -->
-        <div class="col-lg-6">
-          <div class="product-detail-img">
-            <div class="img-magnifier-container">
-              <img id="mainProductImage" src="images/product-img1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-
-          <div class="product-thumbs">
-            <img src="images/product-img1.png" class="thumb-img active">
-            <img src="images/product-img2.png" class="thumb-img">
-            <img src="images/product-img3.png" class="thumb-img">
-          </div>
-        </div>
-
-
-        <!-- RIGHT : CONTENT -->
-        <div class="col-lg-6">
-          <div class="product-detail-content">
-
-            <h2 class="product-title">Power Programmer Chips</h2>
-
-            <p class="product-price">$500.00</p>
-
-            <p class="product-short-desc">
-              High performance power programmer chips designed to enhance engine output and fuel efficiency.
-            </p>
-
-            <!-- QUANTITY -->
-            <div class="qty-wrap">
-              <span>Quantity</span>
-              <div class="qty-box">
-                <button>-</button>
-                <input type="number" value="1">
-                <button>+</button>
-              </div>
-            </div>
-
-            <!-- BUTTONS -->
-            <div class="product-actions">
-              <button class="hbs-cart">Add to Cart</button>
-              <button class="hbs-view">Buy Now</button>
-            </div>
-
-            <!-- META -->
-            <div class="product-meta">
-              <p><strong>Brand:</strong> Bosch</p>
-              <p><strong>Category:</strong> Engine</p>
-              <p><strong>Availability:</strong> In Stock</p>
-            </div>
-
-          </div>
-        </div>
-        <!-- PRODUCT TABS -->
-        <div class="product-tabs mt-4">
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#desc">Description</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#info">Additional Info</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews">Reviews</button>
-            </li>
-          </ul>
-
-          <div class="tab-content p-3">
-            <div class="tab-pane fade show active" id="desc">
-              <p>
-                These power programmer chips are engineered to deliver maximum performance,
-                improve throttle response and fuel efficiency.
-              </p>
-            </div>
-
-            <div class="tab-pane fade" id="info">
-              <ul>
-                <li>Material: Aluminum Body</li>
-                <li>Warranty: 1 Year</li>
-                <li>Compatibility: All models</li>
-              </ul>
-            </div>
-
-            <div class="tab-pane fade" id="reviews">
-              <p>⭐⭐⭐⭐⭐ (4.8/5)</p>
-              <p>Very good performance upgrade. Highly recommended!</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
   </div>
 
 
@@ -196,76 +101,6 @@
     });
     // loder-end
 
-  </script>
-
-
-<script>
-function magnify(imgID, zoom) {
-  const img = document.getElementById(imgID);
-
-  const glass = document.createElement("DIV");
-  glass.setAttribute("class", "img-magnifier-glass");
-  img.parentElement.appendChild(glass);
-
-  const bw = 3;
-  const w = glass.offsetWidth / 2;
-  const h = glass.offsetHeight / 2;
-
-  glass.style.backgroundImage = `url('${img.src}')`;
-  glass.style.backgroundSize =
-    img.width * zoom + "px " + img.height * zoom + "px";
-
-  function moveMagnifier(e) {
-    e.preventDefault();
-    const pos = getCursorPos(e);
-    let x = pos.x;
-    let y = pos.y;
-
-    /* 🔥 LIMIT inside image */
-    if (x < w / zoom) x = w / zoom;
-    if (x > img.width - w / zoom) x = img.width - w / zoom;
-    if (y < h / zoom) y = h / zoom;
-    if (y > img.height - h / zoom) y = img.height - h / zoom;
-
-    glass.style.left = (x - w) + "px";
-    glass.style.top = (y - h) + "px";
-
-    glass.style.backgroundPosition =
-      "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-  }
-
-  function getCursorPos(e) {
-    const rect = img.getBoundingClientRect();
-    const x = (e.touches ? e.touches[0].pageX : e.pageX) - rect.left - window.pageXOffset;
-    const y = (e.touches ? e.touches[0].pageY : e.pageY) - rect.top - window.pageYOffset;
-    return { x, y };
-  }
-
-  glass.addEventListener("mousemove", moveMagnifier);
-  img.addEventListener("mousemove", moveMagnifier);
-  glass.addEventListener("touchmove", moveMagnifier);
-  img.addEventListener("touchmove", moveMagnifier);
-}
-
-/* INIT */
-window.addEventListener("load", () => {
-  magnify("mainProductImage", 2.2);
-});
-
-/* THUMB CHANGE */
-document.querySelectorAll(".product-thumbs img").forEach(thumb => {
-  thumb.addEventListener("click", () => {
-    const main = document.getElementById("mainProductImage");
-    main.src = thumb.src;
-
-    document.querySelectorAll(".product-thumbs img")
-      .forEach(i => i.classList.remove("active"));
-    thumb.classList.add("active");
-
-    document.querySelector(".img-magnifier-glass")?.remove();
-    magnify("mainProductImage", 2.2);
-  });
-});
 </script>
 
 
