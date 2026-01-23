@@ -204,6 +204,10 @@
   #home-best-seller .hbs-product {
     padding: 13px;
   }
+  .sec404bg img {
+  margin: auto;
+  width: 90% !important;
+}
 
   #home-best-seller h6 {
     font-size: 16px;
