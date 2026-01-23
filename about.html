@@ -66,16 +66,56 @@
   <!-- abouther -->
   <div class="container-fluid abutsecbg">
     <h2 class="sectextheral">About Us</h2>
-    <p class="secprdec"><a class="secmebg" href="index.html">Home</a> | <a class="secmebg2"
-        href="about.html">About Us</a></p>
+    <p class="secprdec"><a class="secmebg" href="index.html">Home</a> | <a class="secmebg2" href="about.html">About
+        Us</a></p>
   </div>
 
-    <!-- PRODUCT DETAIL -->
+  <!-- PRODUCT DETAIL -->
+  <div class="container-fluid secproductsbg2 ">
+    <div class="seccarmarbg">
+      <img src="images/carabut1.png" alt="">
+    </div>
+  </div>
+
+  <!--  -->
   <div class="container-fluid secproductsbg2">
+<div class="container">
+    <div class="secabopasdcont">
+      <h5>Welcome to</h5>
+      <h3>Auto Glamour</h3>
+      <p>Founded in 2021, Auto Panther stands for quality, innovation, and passion for cars. We are dedicated to
+        providing premium car care products, advanced detailing solutions, and smart automotive accessories trusted by
+        professionals and car enthusiasts across India.</p>
+      <p>Driven by a commitment to excellence, Auto Panther continues to redefine the car care experience with products
+        that combine performance, reliability, and cutting-edge innovation.</p>
+    </div>
 
+    <!--  -->
+    <div class="row pt-5  ">
+      <div class="col-md-6">
+        <img class="img-fluid" src="images/aboutcarimg.jpg" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="sec-adcot">
+          <h3 class="m-0">Cars</h3>
+          <p>Experience unmatched performance and style with Auto Panther’s premium vehicles. Drive luxury,
+            comfort, and innovation wherever you go.</p>
+        </div>
+        <div class="sec-adcot">
+          <h3>Servicing</h3>
+          <p>Our expert technicians ensure your car stays in top condition with high-quality maintenance,
+            repairs, and detailing services.</p>
+        </div>
+        <div class="sec-adcot">
+          <h3>Accessories</h3>
+          <p>From custom upgrades to the latest tech, Auto Panther offers a range of accessories to enhance
+            your driving experience and style.
+          </p>
+        </div>
+      </div>
+    </div> 
   </div>
-
-
+  </div>
 
 
   <!-- footer -->
@@ -101,8 +141,48 @@
     });
     // loder-end
 
-</script>
+  </script>
 
+  <script>
+    let totalFrames = 36;
+    let currentFrame = 1;
+    let dragging = false;
+    let startX = 0;
+
+    const carImg = document.getElementById("carFrame");
+
+    function showFrame(frame) {
+      if (frame < 1) frame = totalFrames;
+      if (frame > totalFrames) frame = 1;
+      carImg.src = `images/360/car_${String(frame).padStart(2, '0')}.png`;
+      currentFrame = frame;
+    }
+
+    // Mouse Drag
+    carImg.addEventListener("mousedown", (e) => {
+      dragging = true;
+      startX = e.clientX;
+    });
+
+    window.addEventListener("mouseup", () => dragging = false);
+
+    window.addEventListener("mousemove", (e) => {
+      if (!dragging) return;
+      let diff = e.clientX - startX;
+      if (Math.abs(diff) > 15) {
+        if (diff > 0) showFrame(currentFrame - 1);
+        else showFrame(currentFrame + 1);
+        startX = e.clientX;
+      }
+    });
+
+    // Mouse Scroll
+    carImg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      if (e.deltaY > 0) showFrame(currentFrame + 1);
+      else showFrame(currentFrame - 1);
+    });
+  </script>
 
 </body>
 

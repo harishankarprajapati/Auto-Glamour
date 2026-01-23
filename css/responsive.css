@@ -36,6 +36,27 @@
 
 
 @media only screen and (max-width:768px) {
+  
+.seccarmarbg img {
+    width: 95%;
+
+}
+.seccarmarbg {
+    margin-top: -50px;
+}
+.sec-adcot h3 {
+    font-size: 26px;
+}
+.secproductsbg2 {
+    background: #f7f4ec;
+    padding: 10px;
+}
+.secabopasdcont h3 {
+    font-size: 33px;
+}
+.sec-adcot {
+    padding-top: 30px;
+}
   .sec-mobilelogo {
     display: block;
     width: 75%;
